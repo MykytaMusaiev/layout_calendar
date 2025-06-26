@@ -8,14 +8,13 @@ $border-type: solid;
 
 // Color
 $day-bg-color: #eee;
-$day-hover-bg-color: #FFBFCB;
+$day-hover-bg-color: #ffbfcb;
 $border-color: #000;
 $text-color: #000;
 
-//text
+// Text
 $day-font-size: 30px;
 $day-font-family: Arial, sans-serif;
-
 $start-days: (
   'mon': 0,
   'tue': 1,
@@ -42,9 +41,8 @@ body {
   padding: $padding;
   width: ($day-size * $columns) + ($gap * ($columns - 1)) + ($padding * 2);
 
-  justify-content: center;
+  place-content: flex-start center;
   align-items: center;
-  align-content: flex-start;
 
   @each $day, $index in $start-days {
     &.calendar--start-day-#{$day} {
